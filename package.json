@@ -1,0 +1,35 @@
+{
+  "name": "todo-list-mongo",
+  "version": "1.0.0",
+  "description": "Todo list using nosql mongo as the database",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TaiwoDM/todo-list.git"
+  },
+  "keywords": [
+    "todo-list",
+    "rest-api",
+    "api",
+    "nodejs",
+    "express",
+    "mongo",
+    "mongoose"
+  ],
+  "author": "taiwodm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TaiwoDM/todo-list/issues"
+  },
+  "homepage": "https://github.com/TaiwoDM/todo-list#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3"
+  },
+  "type": "module"
+}
