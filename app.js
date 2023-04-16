@@ -1,4 +1,4 @@
-import { signup } from "./controllers/auth.js";
+import { signup, signin } from "./controllers/auth.js";
 
 import express from "express";
 
@@ -7,6 +7,7 @@ const app = express();
 app.use(express.json());
 
 app.post("/api/auth/signup", signup);
+app.post("/api/auth/signin", signin);
 
 // unknown routes handler
 app.all("*", (req, res, next) => {
