@@ -2,15 +2,23 @@ import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 
 const userSchema = new mongoose.Schema({
-  emmail: {
+  email: {
     type: String,
-    require: [true, "Provide all required info to create user"],
     trim: true,
+    unique: true,
   },
 
   password: {
     type: String,
-    require: [true, "Provide all required info to create user"],
     select: false,
   },
 });
+
+// hash passwordd before saving to db
+userSchema.pre("save", async function (next) {
+  this.password = await bcrypt.hash(this.password, 12);
+});
+
+const User = mongoose.model("User", userSchema);
+
+export default User;
